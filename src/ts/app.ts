@@ -1,7 +1,7 @@
 function startGame(_v: any) {
   _v.preventDefault();
 
-  const playerName: string = 'Fast Junkie...';
+  let playerName: string = 'Fast Junkie...';
   logPlayer(playerName);
 
   const messagesElement: HTMLElement | null = document.getElementById('messages');
