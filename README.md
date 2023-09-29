@@ -20,7 +20,7 @@ It's just an online course right...?
 ```
 # Set up...
 npm run build
-npm run start
+npm start
 
 # Loads up on...
 #   127.0.0.1:2112/
