@@ -18,10 +18,10 @@ I essentially dropped it into an `Express.js` template that I had laying around.
 It's just an online course right...?
 
 ```
-// Set up...
+# Set up...
 npm run build
 npm run start
 
-// Loads up on...
-//   127.0.0.1:2112/
+# Loads up on...
+#   127.0.0.1:2112/
 ```
