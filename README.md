@@ -15,6 +15,8 @@ This is my assimilation of the above said PluralSite course... sorry in advance 
 
 I essentially dropped it into an `Express.js` template that I had laying around... I then dumped all things `Webpack`, running `nodemon` to ease my server pains.
 
+`main` is essentially `module-02` after that each module is its own branch, I never merge back to main...
+
 It's just an online course right...?
 
 ```
