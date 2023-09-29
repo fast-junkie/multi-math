@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <title></title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">&nbsp;</a>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div class="loader d-block">
+        <img src="/assets/img/loading.svg" alt="loading...">
+        loading...
+      </div>
+      <div class="loader-container d-none">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div id="name-form">
+              <form>
+                <div class="mb-3">
+                  <label for="player-name" class="form-label">Player Name</label>
+                  <input type="text" id="player-name" 
+                    class="form-control form-control-sm" 
+                    placeholder="Player Name" />
+                </div>
+                <div class="mb-3">
+                  <label for="factor" class="form-label">Factor</label>
+                  <input type="number" id="factor" 
+                    class="form-control form-control-sm" 
+                    placeholder="Factor" 
+                    value="5" />
+                </div>
+                <div class="mb-3">
+                  <label for="problem-count" class="form-label">Problem Count</label>
+                  <input type="number" id="problem-count" 
+                    class="form-control form-control-sm" 
+                    placeholder="Problem Count" 
+                    value="3" />
+                </div>
+                <div class="text-end">
+                  <button id="start-game" class="btn btn-sm btn-primary">Start Game</button>
+                  <button id="calculate" class="btn btn-sm btn-success" disabled>Calculate Score</button>
+                </div>
+                
+              </form>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div id="game"></div>
+            <div id="scores">
+              <h4>Scoreboard</h4>
+              <p>No scores yet...</p>
+            </div>
+            <div id="messages"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="container-fluid bg-dark text-white fixed-bottom">
+      <p class="m-0 py-1 small text-end">&nbsp;</p>
+    </footer>
+
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/app.js"></script>
+  </body>
+</html>

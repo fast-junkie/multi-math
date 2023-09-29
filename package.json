@@ -1,0 +1,68 @@
+{
+  "name": "multi-math",
+  "description": "My assimilation of Brice Wilson's - [multimath 4.0.0] - Simple math game built with TypeScript... ~~ pluralsight.com",
+  "version": "0.6.5",
+  "private": true,
+  "author": "Fast Junkie",
+  "license": "ISC",
+  "main": "server.js",
+  "scripts": {
+    "vendor-copy": "npx copy-files-from-to",
+    "app-sass": "sass --no-source-map src/sass/app.scss public/assets/css/app.css --style compressed",
+    "css-build": "npm run app-sass",
+    "css-watch": "onchange 'src/sass/**/*.scss' -- npm run css-build",
+    "build": "npm install && npm run vendor-copy && npm run css-build",
+    "watch": "npm-run-all --parallel *-watch",
+    "start": "DEBUG=multi-math,multi-math:* nodemon server.js",
+    "test": "jest --coverage"
+  },
+  "copyFiles": [
+    {
+      "from": [
+        "node_modules/angular*/angular*.min.js",
+        "node_modules/angular*/angular*.min.js.map"
+      ],
+      "to": "public/assets/vendor/"
+    },
+    {
+      "from": "node_modules/bootstrap/dist/**/*",
+      "to": "public/assets/vendor/bootstrap/"
+    },
+    {
+      "from": "node_modules/bootstrap-icons/font/**/*",
+      "to": "public/assets/vendor/bootstrap-icons/"
+    },
+    {
+      "from": "node_modules/jquery/dist/jquery.min*",
+      "to": "public/assets/vendor/jquery/"
+    }
+  ],
+  "copyFilesSettings": {
+    "whenFileExists": "overwrite"
+  },
+  "dependencies": {
+    "angular": "1.8.3",
+    "angular-route": "1.8.3",
+    "angular-sanitize": "1.8.3",
+    "bootstrap": "latest",
+    "bootstrap-icons": "latest",
+    "debug": "latest",
+    "express": "latest",
+    "jquery": "latest",
+    "morgan": "latest"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "latest",
+    "@tsconfig/recommended": "^1.0.3",
+    "copy-files-from-to": "latest",
+    "eslint": "latest",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-plugin-import": "latest",
+    "jest": "latest",
+    "nodemon": "latest",
+    "npm-run-all": "latest",
+    "onchange": "latest",
+    "sass": "latest",
+    "typescript": "latest"
+  }
+}

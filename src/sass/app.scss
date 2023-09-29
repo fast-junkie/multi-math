@@ -1,0 +1,28 @@
+* {
+  scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(33, 37, 41, 1);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(238, 238, 238, 0.8);
+  border-radius: 10px;
+  border: thin solid rgba(138, 138, 138, 0.8);
+}
+
+body,
+select,
+input,
+button,
+textarea {
+  font: {
+    family: 'Source Code Pro', monospace !important;
+    size: 0.8rem;
+  }
+}
+main {
+ margin-top: 5rem;
+}
