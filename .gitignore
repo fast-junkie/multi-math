@@ -3,6 +3,7 @@
 
 # Generated directories...
 public/assets/css/
+public/assets/js/
 public/assets/vendor/
 
 # Dev assets...
