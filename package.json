@@ -11,6 +11,7 @@
     "app-sass": "sass --no-source-map src/sass/app.scss public/assets/css/app.css --style compressed",
     "css-build": "npm run app-sass",
     "css-watch": "onchange 'src/sass/**/*.scss' -- npm run css-build",
+    "ts-watch": "tsc -w",
     "build": "npm install && npm run vendor-copy && npm run css-build",
     "watch": "npm-run-all --parallel *-watch",
     "start": "DEBUG=multi-math,multi-math:* nodemon server.js",

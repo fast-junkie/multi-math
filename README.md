@@ -22,6 +22,9 @@ It's just an online course right...?
 npm run build
 npm start
 
+# Dev...
+npm run watch
+
 # Loads up on...
 #   127.0.0.1:2112/
 ```
