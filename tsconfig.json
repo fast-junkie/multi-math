@@ -4,6 +4,8 @@
     "rootDir": "./src/ts",
     "outDir": "./public/assets/js",
     "sourceMap": true,
+    
+    "noImplicitAny": true,
     "strictNullChecks": true
   },
 }
