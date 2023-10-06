@@ -1,8 +1,9 @@
 {
   "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
+    "module": "none",
     "rootDir": "./src/ts",
-    "outDir": "./public/assets/js",
+    "outFile": "./public/assets/js/app.js",
     "sourceMap": true,
     
     "noImplicitAny": true,

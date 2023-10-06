@@ -1,35 +1,19 @@
-function startGame(_v: any): void {
+/// <reference path="game.ts" />
+/// <reference path="player.ts" />
+
+let _game: Game;
+document.querySelector('#start-game')!.addEventListener('click', (_v) => {
   _v.preventDefault();
+  const _player: Player = new Player();
+  _player.name = Utility.getInputValue('player-name');
 
-  const playerName: string | undefined = getInputValue('player-name');
-  logPlayer(playerName);
+  const _problemCount: number = Number(Utility.getInputValue('problem-count'));
+  const _factor: number = Number(Utility.getInputValue('factor'));
+  _game = new Game(_player, _problemCount, _factor);
+  _game.displayGame();
+}, false);
 
-  postScore(-1, playerName);
-
-  const messagesElement: HTMLElement | null = document.getElementById('messages');
-  messagesElement!.innerText = 'Welcome to MultiMath! Starting a new game...';  
-}
-
-function logPlayer(_name: string = 'Fast Junkie...'): void {
-  console.debug('New game started for player: %s', _name);
-}
-
-function postScore(_score: number, _playerName: string = 'Fast Junkie...'): void {
-  let logger: (value: string) => void;
-  logger = (_score < 0) ? logError : logMessage;
-
-  const elem: HTMLElement | null = document.getElementById('posted-scores'); 
-  elem!.innerText = `${_score} - ${_playerName}`;
-
-  logger(`Score: ${_score}`);
-}
-
-function getInputValue(selector: string): string | undefined {
-  const elem: HTMLInputElement = <HTMLInputElement>document.getElementById(selector);
-  return (elem.value !== '') ? elem.value : undefined;
-}
-
-const logMessage = (message: string): void => console.debug(message);
-const logError = (error: string): void => console.error(error);
-
-document.getElementById('start-game')!.addEventListener('click', startGame);
+document.querySelector('#calculate')!.addEventListener('click', (_v) => {
+  _v.preventDefault();
+  _game.calculateScore();
+}, false);

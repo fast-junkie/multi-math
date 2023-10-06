@@ -53,8 +53,7 @@
     "morgan": "latest"
   },
   "devDependencies": {
-    "@tsconfig/node20": "latest",
-    "@tsconfig/recommended": "^1.0.3",
+    "@tsconfig/recommended": "latest",
     "copy-files-from-to": "latest",
     "eslint": "latest",
     "eslint-config-airbnb-base": "latest",
