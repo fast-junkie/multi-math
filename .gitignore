@@ -6,6 +6,9 @@ public/assets/css/
 public/assets/js/
 public/assets/vendor/
 
+# Generated files...
+src/ts/*.js*
+
 # Dev assets...
 node_modules/
 package-lock.json

@@ -1,9 +1,9 @@
-/// <reference path="utility.ts" />
-/// <reference path="result.ts" />
-/// <reference path="player.ts" />
-/// <reference path="scoreboard.ts" />
+import { getValue } from './utility';
+import { Result } from './result';
+import { Player } from './player';
+import { Scoreboard } from './scoreboard';
 
-class Game {
+export class Game {
   private _scoreboard: Scoreboard = new Scoreboard();
 
   constructor(public player: Player, public problemCount: number, public factor: number) {}
@@ -26,7 +26,7 @@ class Game {
   calculateScore(): void {
     let score: number = 0;
     for (let i = 1; i <= this.problemCount; i++) {
-      const answer: number = Number(Utility.getInputValue(`answer-${i}`));
+      const answer: number = Number(getValue(`answer-${i}`));
       if (i * this.factor === answer) {
         score++;
       }
