@@ -1,5 +1,7 @@
 # multi-math
 
+#### [archived: 2023-10-07T09:00:08-04:00]
+
 [TypeScript 4: Getting Started](https://app.pluralsight.com/library/courses/getting-started-typescript/)
 by Brice Wilson
 
