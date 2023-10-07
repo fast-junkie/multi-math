@@ -52,10 +52,12 @@
     "debug": "latest",
     "express": "latest",
     "jquery": "latest",
+    "lodash": "latest",
     "morgan": "latest"
   },
   "devDependencies": {
     "@tsconfig/recommended": "latest",
+    "@types/lodash": "latest",
     "copy-files-from-to": "latest",
     "eslint": "latest",
     "eslint-config-airbnb-base": "latest",
